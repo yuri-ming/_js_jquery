@@ -63,6 +63,12 @@ person2.sayHello();
 ```Javascript
 'first-name','last-name',gender,function
 ```
+```Javascript
+var foo={}; //foo 객체 생성
+foo.a =1; //.연산자를 이용하여 a라는 이름의 프로퍼티를 생성하면서 1이라는 값을 할당
+var sum = foo.a+10; //.연산자를 이용하여 foo 객체의 a 프로퍼티에 접근하여 값을 활용가능
+console.log(sum); //11
+```
 ##### 2) 프로퍼티 값 읽기
 ##### - 마침표 표기법 : 프로퍼티가 유효한 자바스크립트 이름이고 예약어가 아닌경우
 ```Javascript
