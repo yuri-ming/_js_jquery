@@ -82,7 +82,7 @@ console.log(person['first-name']);
 ```Javascript
 delete person;
 ```
-##### 4. for-in문 :객체(배열포함)에 포함된 모든 프로퍼티에 대해 루프를 수행함
+##### 4. for-in문 :객체(배열포함)에 포함된 모든 프로퍼티에 대해 루프를 수행함(반복문!)
 ```Javascript
 for(var prop in person){
   console.log(prop + ':' + person[prop]); //prop에 객체의 프로퍼티 이름이 반환됨
