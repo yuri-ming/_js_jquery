@@ -27,7 +27,7 @@
   <body>
     <h1>Number guessing game</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>대충 간단한 숫자게임이라는 뜻</p>
 
     <div class="form">
       <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
@@ -57,26 +57,26 @@
       function checkGuess(){
          let userGuess = Number(guessField.value); //useGuess변수 선언, 텍스트 필드에서 입력된 현재 값들을 변수의 값으로 지정
          if(guessCount===1){  //현재 플레이어의 게임이 처음인지 판단
-             guesses.textContent='Previous guesses: ';
+             guesses.textContent='guess: ';
          }
          guesses.textContent += userGuess+ ' ';
          
         if (userGuess===randomNumber){  //처음에 지정한 randomNumber와 사용자가 추측한 값이 같으면
-            lastResult.textContent = 'Congratulations! You got it right';
+            lastResult.textContent = '축하추카*^^*';
             lastResult.style.backgroundColor='green';
             lowOrHi.textContent=' ';
             setGameOver();  //축하메세지를 띄우며 게임 종료
         } else if(guessCount===10){  //사용자가 마지막 순서인지 계산
-            lastResult.textContent='!!!GameOver!!!';
+            lastResult.textContent='FINISH............';
             lowOrHi.textContent=' ';
             setGameOver();  //축하메세지 제외하고 게임 종료
         } else {
-            lastResult.textContent='Wrong!';
+            lastResult.textContent='WRONG';
             lastResult.style.backgroundColor='red';
             if(userGuess<randomNumber){
-                lowOrHi.textContent='Last guess was too low!';
+                lowOrHi.textContent='too low';
             } else if (userGuess>randomNumber){
-                lowOrHi.textContent = 'Last guess was too high!';
+                lowOrHi.textContent =  'too high';
             }
     
         }
@@ -94,7 +94,7 @@
           guessField.disabled=true;
           guessSubmit.disabled=true;  //게임이 종료되면 사용자들이 사용할 수 없게함
           resetButton = document.createElement('button');  /*새로운 버튼 생성하고 start new game이라고 표시*/
-          resetButton.textContent='Start new game';
+          resetButton.textContent='one more time!';
           document.body.appendChild(resetButton);  //appendChild() : 한 노드를 특정 부모 노드의 자식 노드 리스트중 마지막 자식으로 붙임
           resetButton.addEventListener('click',resetGame);  //새 버튼으로 이벤트 리스너 지정, 클릭되면 resetGame() 함수 실행
       }
